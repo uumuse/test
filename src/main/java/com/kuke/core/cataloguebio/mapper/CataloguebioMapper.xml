@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.core.cataloguebio.mapper.CataloguebioMapper" >
+	<sql id="mysqlPage">
+		<if test="rows > 0">LIMIT #{offset}, #{rows}</if>
+	</sql>
+		
+	<select id="getItemCodeList" resultType="java.lang.String">
+		SELECT t.item_code FROM music.cataloguebio t
+		<include refid="mysqlPage"/>
+	</select>
+
+	<select id="getCataloguebioList" resultType="com.kuke.core.cataloguebio.bean.Cataloguebio" parameterType="java.util.List">
+		SELECT * FROM music.cataloguebio t WHERE t.item_code IN
+		<foreach item="itemcode" index="index" collection="itemCodeList" open="(" separator="," close=")">
+			#{itemcode,jdbcType=CHAR}
+		</foreach>
+	</select>
+		
+	<select id="getCataloguebioById" resultType="com.kuke.core.cataloguebio.bean.Cataloguebio" parameterType="java.lang.String">
+		SELECT * FROM music.cataloguebio t where t.item_code = #{itemCode}
+	</select>
+</mapper>

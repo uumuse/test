@@ -1,0 +1,18 @@
+html{ font:62.5%/1.14 DroidSans,Helvetica; word-wrap:break-word;}
+body,ul,ol,p,h1,h2,h3,h4,h5,h6,form,input,dl,dd,hr,select,option,th,tr,td,textarea{ margin:0; padding:0;}
+html,body{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+input,button,textarea,select,option{ outline:none;}
+img,table,iframe{ border:none;}
+iframe{ width:100%;}
+textarea{ resize:none;}
+img{ vertical-align:bottom;}
+table{ border-collapse:collapse;}
+li{ list-style:none;}
+a{ text-decoration:none; outline:none; hide-focus:expression(this.hideFocus=true);}
+a:hover{ text-decoration:underline;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+.appearnone{ -webkit-appearance:none;}
+.clearfix:after{ content:"."; display:block; clear:both; height:0; visibility:hidden;}
+.clearfix{ *zoom:1;}

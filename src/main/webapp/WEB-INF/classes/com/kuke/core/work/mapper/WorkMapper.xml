@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.core.work.mapper.WorkMapper" >
+	<sql id="mysqlPage">
+		<if test="rows > 0">LIMIT #{offset}, #{rows}</if>
+	</sql>
+	
+	<select id="getWorkKeyList" resultType="com.kuke.core.work.bean.WorkKey">
+		SELECT 
+			DISTINCT t.item_code, t.workid
+		FROM 
+			music.works t 
+		<include refid="mysqlPage"/>
+	</select>
+
+	<select id="getWorkList" resultType="com.kuke.core.work.bean.Work" parameterType="java.util.List">
+		SELECT 
+			DISTINCT t.item_code, t.workid, t.title, t.ctitle, t.timing
+		FROM 
+			music.works t 
+		WHERE (t.item_code, t.workid) IN
+		<foreach item="workKey" index="index" collection="workKeyList" open="(" separator="," close=")">
+			${workKey.key}
+		</foreach>
+		ORDER BY workid
+	</select>
+</mapper>

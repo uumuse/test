@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.core.musician.mapper.MusicianMapper" >
+	
+	<select id="getMusicianOfWork" resultType="com.kuke.core.musician.bean.MusicianOfWork" parameterType="java.util.List" statementType="STATEMENT">
+		SELECT
+			DISTINCT s.item_code, s.workid, s.p_flag musicianType, m.fullname
+		FROM
+			music.subwork s INNER JOIN music.musician m ON s.musicanid = m.musicanid AND s.p_flag = m.type
+		WHERE
+			s.p_flag IN ('1', '6', '7') AND (s.item_code,s.workid) IN
+			<foreach item="workKey" index="index" collection="workKeyList" open="(" separator="," close=")">
+				${workKey.key}
+			</foreach>
+		ORDER BY item_code, workid, musicianType
+	</select>
+	
+	<select id="getMusicianOfTrack" resultType="com.kuke.core.musician.bean.MusicianOfTrack" parameterType="java.util.List" statementType="STATEMENT">
+		SELECT
+			DISTINCT s.l_code, s.p_flag musicianType, m.fullname
+		FROM
+			music.subwork s INNER JOIN music.musician m ON s.musicanid = m.musicanid AND s.p_flag = m.type
+		WHERE
+			s.p_flag IN ('0', '2', '3','4', '5') AND s.l_code IN
+			<foreach item="lcode" index="index" collection="lcodeList" open="(" separator="," close=")">
+				'${lcode}'
+			</foreach>
+		ORDER BY l_code, musicianType
+	</select>
+</mapper>

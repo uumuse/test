@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.card.mapper.MusicAlbumMapper" >
+	<select id="getMusicAlbumById" resultType="com.kuke.card.bean.MusicAlbum" parameterType="java.lang.Long">
+		SELECT * FROM classicat.music_album t where t.id = #{id}
+	</select>
+	
+	<select id="getMusicAlbumRefLcodeList" resultType="java.lang.String" parameterType="java.lang.Long">
+		SELECT t.l_code FROM classicat.album_track t WHERE t.music_album_id = #{albumId}
+	</select>
+	
+	<select id="getMusicAlbumRefCoverList" resultType="java.lang.String" parameterType="java.lang.Long">
+		SELECT DISTINCT t.cover_img FROM classicat.music_album_cover t WHERE t.music_album_id = #{albumId}
+	</select>
+</mapper>

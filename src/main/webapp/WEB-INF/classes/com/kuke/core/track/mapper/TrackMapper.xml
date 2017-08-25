@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.core.track.mapper.TrackMapper">
+	<sql id="mysqlPage">
+		<if test="rows > 0">LIMIT #{offset}, #{rows}</if>
+	</sql>
+	
+	<select id="getTrackListByThemeId" resultType="com.kuke.core.track.bean.Track" parameterType="java.lang.Integer">
+		SELECT * FROM (
+			SELECT DISTINCT
+				t.*
+			FROM (
+				SELECT 
+				pcl.*
+				FROM (SELECT * from prodata.pro_app where id = #{themeId,jdbcType=INTEGER}) p 
+				INNER JOIN prodata.pro_app_package pap ON p.id = pap.pro_app_id
+				INNER JOIN prodata.pro_package pp ON pap.pro_package_id = pp.id
+				INNER JOIN prodata.pro_package_cata_list pcl ON pcl.pro_package_id = pp.id
+			) p
+			INNER JOIN music.cataloguebio c ON c.item_code = p.item_code
+			INNER JOIN music.works w ON w.item_code = c.item_code
+			INNER JOIN music.track t ON t.workid = w.workid
+			ORDER BY p.id, t.cd, t.track
+		) t1
+		UNION ALL
+		SELECT * FROM (
+			SELECT DISTINCT
+				t.*
+			FROM (
+				SELECT 
+				pcl.*
+				FROM (SELECT * from prodata.pro_app where id = #{themeId,jdbcType=INTEGER}) p 
+				INNER JOIN prodata.pro_app_package pap ON p.id = pap.pro_app_id
+				INNER JOIN prodata.pro_package pp ON pap.pro_package_id = pp.id
+				INNER JOIN prodata.pro_package_track_list pcl ON pcl.pro_package_id = pp.id
+			) p
+			INNER JOIN music.track t ON t.l_code = p.l_code
+			INNER JOIN music.works w ON w.workid = t.workid AND w.item_code = t.item_code
+			INNER JOIN music.cataloguebio c ON c.item_code = w.item_code
+			ORDER BY p.id, t.cd, t.track
+		) t2
+	</select>
+
+	<select id="getLcodeList" resultType="java.lang.String" parameterType="java.lang.String">
+		SELECT t.l_code FROM music.track t
+		<include refid="mysqlPage"/>
+	</select>
+		
+	<select id="getTrackByLcode" resultType="com.kuke.core.track.bean.Track" parameterType="java.lang.String">
+		SELECT * FROM music.track t WHERE t.l_code = #{lcode,jdbcType=CHAR}
+	</select>
+	
+	<select id="getTrackListByLcodes" resultType="com.kuke.core.track.bean.Track" parameterType="java.util.List">
+		SELECT * FROM music.track t WHERE t.l_code IN
+		<foreach item="lcode" index="index" collection="lcodes" open="(" separator="," close=")">
+			#{lcode,jdbcType=CHAR}
+		</foreach>
+	</select>
+</mapper>

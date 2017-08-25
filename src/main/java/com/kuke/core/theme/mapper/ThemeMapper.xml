@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.core.theme.mapper.ThemeMapper" >
+	<select id="getThemesByClazzId" resultType="com.kuke.core.theme.bean.Theme" parameterType="java.lang.Long">
+		SELECT 
+			t2.*
+		FROM 
+			prodata.pro_app_class_res t1 INNER JOIN prodata.pro_app t2 ON t1.pro_app_id = t2.id
+		WHERE 
+			t1.pro_app_class_id = #{clazzId}
+	</select>
+
+	<select id="getThemeIdsByClazzId" resultType="java.lang.Long" parameterType="java.lang.Long">
+		SELECT 
+			t2.id
+		FROM 
+			prodata.pro_app_class_res t1 INNER JOIN prodata.pro_app t2 ON t1.pro_app_id = t2.id
+		WHERE 
+			t1.pro_app_class_id = #{clazzId}
+	</select>
+
+	<select id="getAllThemeId" resultType="java.lang.Long" parameterType="java.lang.Long">
+		SELECT 
+			t.id
+		FROM 
+			prodata.pro_app t
+	</select>
+			
+	<select id="getThemeById" resultType="com.kuke.core.theme.bean.Theme" parameterType="java.lang.Long">
+		SELECT 
+			*
+		FROM 
+			prodata.pro_app 
+		WHERE id = #{themeId}
+	</select>
+</mapper>

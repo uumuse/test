@@ -1,0 +1,146 @@
+body{ background-color:#efefef;}
+.bg01{ background-color:#ffffff;}
+.home{ background-color:#ffffff;}
+.home .home-tit{ height:44px; background-color:#f7f7f7; font-size:1.7em; line-height:44px; text-align:center; color:#1684fb; position:relative;}
+.home .home-tit a{ display:block; width:9px; height:16px; background:url(/images/wap/turn.png) no-repeat; background-size:9px auto; position:absolute; left:4%; top:50%; margin:-8px 0 0 0;}
+.home .home-site{ height:100px; position:relative;}
+.home .home-site-head{ position:absolute; left:13px; top:7px;}
+.home .home-site dl{ width:89px; position:absolute; left:104px; top:22px;}
+.home .home-site dl dt{ height:23px; background:url(/images/wap/cbox-top-tit.png) no-repeat; background-size:70px auto; text-indent:-9999px;}
+.home .home-site dl dd{ height:15px; background:url(/images/wap/cbox-top-info.png) no-repeat; background-size:89px auto; text-indent:-9999px; margin-top:7px;}
+.home .home-site a{ display:block; width:90px; height:28px; line-height:28px; text-align:center; color:#ffffff; font-size:1.5em; background:url(/images/wap/down.png) no-repeat; background-size:90px auto; position:absolute; right:15px; top:32px;}
+.home .home-site a:visited,.home .home-site a:hover{ text-decoration:none;}
+.home .slide{ height:349px; overflow:hidden; padding-left:12px; position:relative;}
+.home .slide ul{ width:600px; position:absolute; left:12px; top:0;}
+.home .slide li{ width:196px; float:left; margin-right:4px;}
+.home .home-foot{ padding:10px 0; text-align:center; color:#044fa2; font-size:1.2em;}
+.home .home-foot .cp{ padding-top:4px;}
+
+.ctop-box{ padding-top:120px;}
+.ctop-bg{ background-color:#e3e3e3;}
+.ctop{ width:1024px; height:436px; margin:0 auto; position:relative;}
+.ctop .g1{ position:absolute; left:392px; top:94px; animation:g1 0.7s ease-out 0.2s backwards; -moz-animation:g1 0.7s ease-out 0.2s backwards; -webkit-animation:g1 0.7s ease-out 0.2s backwards; -o-animation:g1 0.7s ease-out 0.2s backwards; box-shadow:0 0 10px rgba(0,0,0,0.4);}
+.ctop .g2{ position:absolute; left:266px; top:57px; animation:g1 0.7s ease-out 0.5s backwards; -moz-animation:g1 0.7s ease-out 0.5s backwards; -webkit-animation:g1 0.7s ease-out 0.5s backwards; -o-animation:g1 0.7s ease-out 0.5s backwards; box-shadow:0 0 10px rgba(0,0,0,0.4);}
+.ctop .g3{ position:absolute; left:42px; top:-80px; animation:g1 0.7s ease-out 0.8s backwards; -moz-animation:g1 0.7s ease-out 0.8s backwards; -webkit-animation:g1 0.7s ease-out 0.8s backwards; -o-animation:g1 0.7s ease-out 0.8s backwards; box-shadow:0 0 10px rgba(0,0,0,0);}
+.ctop .g4{ position:absolute; left:598px; top:35px; animation:g2 0.7s ease-out 0.2s backwards; -moz-animation:g2 0.7s ease-out 0.2s backwards; -webkit-animation:g2 0.7s ease-out 0.2s backwards; -o-animation:g2 0.7s ease-out 0.2s backwards;}
+@keyframes g1{
+	0%{transform:translate(-2000px,0px);-moz-transform:translate(-2000px,0px);-webkit-transform:translate(-2000px,0px);-o-transform:translate(-2000px,0px);}
+	100%{transform:translate(0px,0px);-moz-transform:translate(0px,0px);-webkit-transform:translate(0px,0px);-o-transform:translate(0px,0px);}
+}
+@keyframes g2{
+	  0%{transform:translate(2000px,0px);-moz-transform:translate(2000px,0px);-webkit-transform:translate(2000px,0px);-o-transform:translate(2000px,0px);}
+	100%{transform:translate(0px,0px);-moz-transform:translate(0px,0px);-webkit-transform:translate(0px,0px);-o-transform:translate(0px,0px);}
+}
+.wrap{padding-top:56px;}
+.cbox{ width:261px; margin:0 auto; padding-top:30px;}
+.cbox .cbox-top-pic{ width:96px; float:left; margin-right:-96px;}
+.cbox .cbox-top-info{ margin-left:110px;}
+.cbox .cbox-top-info dl{ padding-top:16px;}
+.cbox .cbox-top-info dt{ height:32px; background:transparent url(/images/wap/cbox-top-tit.png) no-repeat; background-size:100px auto; text-indent:-9999px;}
+.cbox .cbox-top-info dd{ margin-top:16px; height:16px; background:transparent url(/images/wap/cbox-top-info.png) no-repeat; background-size:98px auto; text-indent:-9999px;}
+.cbox .cbox-bottom{ padding:66px 0 0 0;}
+.cbox .cbox-bottom-qr{ width:98px; float:left; margin-right:-98px;}
+.cbox .cbox-bottom-btn{ margin-left:106px;}
+.cbox .cbox-bottom-btn a{ display:block; width:149px; height:40px; line-height:40px; text-align:center; color:#1684fb; background:transparent url(/images/wap/cbtn-common.png) no-repeat; background-size:cover; font-size:1.5em;}
+.cbox .cbox-bottom-btn a.cbtn-android{ margin-top:16px;}
+.cbox .cbox-bottom-btn a:hover{ text-decoration:none;}
+
+.cbox-info{ padding-top:129px;}
+.cbox-info .cbox-info-list{ width:307px; height:493px; float:left; margin-right:2px;}
+.cbox-info ul{ padding-top:406px; text-align:center; font:16px/24px Microsoft Yahei; color:#aaaaaa;}
+.cbox-info .t1{ background:transparent url(/images/wap/cbox-info-list1.png) no-repeat;}
+.cbox-info .t2{ background:transparent url(/images/wap/cbox-info-list2.png) no-repeat;}
+.cbox-info .t3{ background:transparent url(/images/wap/cbox-info-list3.png) no-repeat; margin-right:0;}
+
+.cbox-foot{ margin-top:30px; border-top:1px solid #e5e5e5; font-size:1.2em; color:#aaaaaa; text-align:center; padding-bottom:10px;}
+.cbox-foot p{ padding-top:10px;}
+.cbox-foot p.p1{ padding-top:6px;}
+
+/*
+.mcon{ padding-top:2.9em;}
+*/
+.mh-con-site{ background-color:#ffffff;}
+.mh-con h1{ height:23px; overflow:hidden; padding:0.7em 0 1.45em 0; text-align:center; font-size:2em; line-height:1.125; color:#1684fb;}
+.mh-con .mh-pic-box{ width:12.6em; height:12.6em; margin:0 auto; padding:0.4em; position:relative;}
+.mh-con .mh-pic-bg{ width:13.5em; height:13.5em; background:transparent url(/images/wap/mh-pic-bg.png) no-repeat; background-size:13.5em auto; position:absolute; left:0; top:0.2em;}
+.mh-con .mh-pic-btn{ display:block; width:13.5em; height:13.5em; position:absolute; left:0; top:0;}
+.mh-con .mh-pic-play{ background:transparent url(/images/wap/mh-pic-play.png) no-repeat 5.9em 5.1em; background-size:2.7em auto;}
+.mh-con .mh-pic-pause{ background:transparent url(/images/wap/mh-pic-pause.png) no-repeat 5.6em 4.9em; background-size:2.7em auto;}
+.mh-con .mh-pic-next{ display:block; width:1.7em; height:1.8em; background:url(/images/wap/mh-pic-next.png) no-repeat; background-size:1.7em auto; position:absolute; left:16.7em; top:5.8em; opacity:0.6; filter:alpha(opacity=60);}
+.mh-con .mh-pic-next:hover{ opacity:1; filter:alpha(opacity=100);}
+.mh-con .mh-info{ height:82px; overflow:hidden; padding:22px 14px; font-size:1.2em; line-height:1.7; color:#313131; text-align:justify;}
+
+.mh-bt-site{ padding:0 14px; background-color:#f7f7f7;}
+.mh-bt h2{ font-size:1.5em; line-height:2.2; color:#313131;}
+.mh-bt .mh-playlist{ padding:10px 0; border-bottom:1px solid #d5d5d5;}
+.mh-bt .mbb1{ border-bottom:none; border-top:1px solid #d5d5d5;}
+.mh-bt .mbb0{ border-bottom:none;}
+.mh-bt .mh-btn{ width:35px; float:right; margin:5px 0 0 -35px;}
+.mh-bt .mh-btn a{ display:block; width:35px; height:35px; outline:none}
+.mh-bt .mh-btn a:active{outline:none}
+.mh-bt .mh-btn a.mh-play{ background:transparent url(/images/wap/mh-play.png) no-repeat; background-size:35px auto;}
+.mh-bt .mh-btn a.mh-pause{ background:transparent url(/images/wap/mh-pause.png) no-repeat; background-size:35px auto;}
+.mh-bt .mh-pro{ margin-right:50px; position:relative;}
+.mh-bt .mh-pro em{ font-size:1.2em; line-height:1.8; color:#656565; position:absolute; left:0px; top:1px; display:block; width:17px;text-align:right;}
+.mh-bt .mh-pro span{ display:block; width:17px; height:26px; background:url(/images/wap/notice-play.jpg) no-repeat; background-size:17px auto; position:absolute; left:0; top:6px;}
+.mh-bt .mh-pro dl{ font-size:1.2em; line-height:1.85; color:#656565; padding-left:20px;}
+.mh-bt .mh-pro dl.st01{ padding-left:0;}
+.mh-bt .mh-pro dl.pl01{ padding-left:20px;}
+.mh-bt .mh-pro dd{ color:#aaaaaa;}
+.mh-bt .dl{ border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; height:36px; line-height:36px; padding-left:22px;}
+.dl a{ font-size:1.3em; color:#f81e1f;}
+.dl a:hover{ text-decoration:none;}
+
+.song{ background-color:#ffffff;}
+.song h1{ height:46px; line-height:46px; padding:0;}
+.song .song-cd{ position:relative;}
+.song .song-btn{ display:block; width:80px; height:80px; position:absolute; right:13px; bottom:13px;}
+.song .song-play{ background:transparent url(/images/wap/song-play.png) no-repeat; background-size:80px auto;}
+.song .song-pause{ background:transparent url(/images/wap/song-pause.png) no-repeat; background-size:80px auto;}
+.song .song-info-box{ text-align:center; padding:16px 0 28px 0;}
+.song .song-info-box p{ width:130px; margin:0 auto; color:#1684fb; font-size:1.7em; text-align:center; position:relative;}
+.song .song-info-box p span{ float:left; margin-right:10px;}
+.song .song-info-box p b{ float:left; margin-right:10px; margin-top:-1px;}
+.song .song-info-box p a{ display:block; width:17px; height:18px; background:url(/images/wap/mh-pic-next.png) no-repeat; background-size:17px auto; position:absolute; left:50%; margin-left:92px; top:1px;}
+.song .song-info-box dl{ width:280px; margin:0 auto;}
+.song .song-info-box dt{ font-size:2.2em; color:#434343; height:24px; margin:28px 0 14px 0; overflow:hidden;}
+.song .song-info-box dd{ font-size:2em; color:#6a6a6a; height:22px; overflow:hidden;}
+.song .song-info-box dd.m2{ margin-top:28px; font-size:1.8em; color:#a3a3a3; width:100%; height:21px; white-space:nowrap; text-overflow:ellipsis;}
+
+.kp{ background-color:#ffffff;}
+.kp .kp-top{ padding:0 0 0 10px; position:relative;}
+.kp .kp-top h1{ width:74%; height:46px; overflow:hidden; line-height:2.3; text-align:left; padding:0; font-size:2em; color:#313131;}
+.kp .kp-top img{ position:absolute; right:10px; top:50%; margin-top:-8px;}
+.kp .kp-play-box{ position:relative; margin:0 10px; border:1px solid #aaa;overflow:hidden;}
+.kp .kp-btn{ display:block; width:80px; height:80px; position:absolute; right:13px; bottom:13px; z-index:91;}
+.kp .kp-play{ background:transparent url(/images/wap/song-play.png) no-repeat; background-size:80px auto;}
+.kp .kp-pause{ background:transparent url(/images/wap/song-pause.png) no-repeat; background-size:80px auto;}
+.kp .kp-info{ padding:15px; font-size:1.3em; line-height:1.7; color:#313131;}
+.kp .kp-info .ht01{ text-indent:2em;}
+.kp .kp-info .m3{ text-align:right; padding-right:14px;}
+
+.yp{ background-color:#ffffff; padding-bottom:3.6em;}
+.yp-head{ height:36px; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; padding-left:60px; background:#dedede url(/images/wap/yp-head-bg.png) no-repeat 22px center; background-size:30px; font-size:1.28em; line-height:36px; color:#aaaaaa;}
+.yp-head p{ width:90%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.y1{ height:43px; font:18px/38px arial; border-top:none; background-position:32px 0;}
+.yp-site-list .m4{ padding:10px 12px 10px 22px;}
+.yp-site-list .m4 .mh-btn{ width:35px; margin-left:-35px;}
+.yp-site-list .m4 .mh-pro span{ font:18px/1 Microsoft Yahei; position:absolute; left:0; top:5px;}
+.m4 .mh-btn a.cd-play{ width:35px; height:35px; background:transparent url(/images/wap/cd-play.png) no-repeat; background-size:35px auto;}
+.m4 .mh-btn a.cd-pause{ width:35px; height:35px; background:transparent url(/images/wap/cd-pause.png) no-repeat; background-size:35px auto;}
+.mh-bt-con .pl02{ padding-left:32px;}
+
+.ui-loader-default{ display:none;}
+
+#pop-bg{ width:100%; background-color:#000000; position:absolute; left:0; top:0; display:none; opacity:0.7; filter:alpha(opacity=70); z-index:99;}
+#popup{ background-color:#ffffff; position:fixed; left:0; top:0; display:none; z-index:100;}
+
+
+/* download float */
+.mtop-box{ width:100%; position:fixed; left:0; top:0; z-index:99;}
+.mtop{ padding:8px; background-color:#595959;}
+.mtop .mopen{ display:block; width:61px; height:23px; background:url(/images/wap/mopen-bg.png) no-repeat; background-size:61px 23px; float:right; line-height:22px; text-align:center; font-size:1.2em; color:#ffffff; margin-top:8px;}
+.mtop .mopen:hover,.mtop .mopen:visited{ text-decoration:none;}
+.mtop dl{ height:40px; padding-left:47px; background:url(/images/wap/mtop-logo.png) no-repeat; background-size:40px 40px;}
+.mtop dt{ padding-top:5px; font-size:1.2em; color:#ffffff; white-space:nowrap; overflow:scroll;}
+.mtop dd{ padding-top:7px; font-size:1.1em; color:#bbbaba; white-space:nowrap; overflow:scroll;}

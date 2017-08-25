@@ -1,0 +1,17 @@
+html{ font:12px/1 Simsun,Microsoft Yahei;}
+body,ul,ol,p,h1,h2,h3,h4,h5,h6,form,input,dl,dd,hr,select,option,th,tr,td,textarea{ margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+input,button,textarea,select,option{ outline:none; font:12px Simsun,Microsoft Yahei;}
+img,table,iframe{ border:none;}
+iframe{ width:100%;}
+textarea{ resize:none;}
+img{ vertical-align:bottom;}
+table{ border-collapse:collapse;}
+li{ list-style:none;}
+a{ text-decoration:none; outline:none; hide-focus:expression(this.hideFocus=true);}
+a:hover{ text-decoration:underline;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+.es{ display:block; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:arial;}
+.clearfix:after{ content:"."; display:block; clear:both; height:0; visibility:hidden;}
+.clearfix{ *zoom:1;}

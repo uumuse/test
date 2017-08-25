@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuke.prodata.mapper.ShareMapper">
+	<sql id="mysqlPage">
+		<if test="rows > 0">LIMIT #{offset}, #{rows}</if>
+	</sql>
+	
+	<select id="getTrackInfo" resultType="Map">
+ 		 select a.*,(select title from music.works w where w.workid=a.workid limit 1) as wtitle from (
+	        select l.* ,c.labelid from 
+	               (select t.l_code,t.workid,t.item_code,t.timing,t.title  
+	                       from music.track t  where  t.l_code=#{lcode} )
+	               l left join music.cataloguebio c 
+	               on l.item_code=c.item_code
+		 ) a
+	</select>
+
+		<!-- 得到专辑的演奏家，作曲家等等 -->
+	<select id="getMusiciansByWorkPkList" resultType="Map"
+		statementType="STATEMENT">
+		select
+		s.item_code, s.workid, s.l_code, m.fullname, s.p_flag flag
+		from
+		music.subwork s left join music.musician m on s.musicanid = m.musicanid and
+		s.p_flag=m.type
+		where
+		(item_code, workid) in
+		<if test="pkList != null">
+			<foreach item="pk" index="index" collection="pkList" open="("
+				separator="," close=")">
+				${pk}
+			</foreach>
+		</if>
+		order by flag desc
+	</select>
+		
+	
+</mapper>

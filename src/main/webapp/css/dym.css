@@ -1,0 +1,69 @@
+.main{ width:940px; margin:0 auto;}
+.mright{ width:456px; float:right; margin:58px 0 0 -456px;}
+.qrbox{ height:213px; background:url(../images/qrbox-bg.png) no-repeat 0 5px; padding-left:250px;}
+.qr{ padding:5px; background:url(../images/qr-bg.png) no-repeat;}
+.dl{ padding:58px 0 30px 0;}
+.dl-list{ width:202px; float:left; margin-left:20px;}
+.dl-list a{ display:block; width:202px; height:58px; background:url(../images/sprite-btn.png) no-repeat;}
+.dl-list .dl-android{ background-position:-202px 0;}
+.dl-list .dl-android:hover{ background-position:-202px -58px;}
+.dl-list .dl-iphone:hover{ background-position:0 -58px;}
+.dl-list p{ padding-top:8px; font-size:1.4em; color:#000000; text-align:center;}
+
+.mbox{ padding-top:50px;}
+.pb48{ padding-bottom:48px;}
+.mleft{ margin-right:500px;}
+.cd-pic{ padding:117px 0; background:url(../images/cd-pic-bg.png) no-repeat; text-align:center; position:relative;}
+.cd-btn{ display:block; width:80px; height:80px; position:absolute; left:50%; top:50%; margin:-40px 0 0 -40px;}
+.cd-play{ background:url(../images/play.png) no-repeat;}
+.cd-pause{ background:url(../images/pause.png) no-repeat;}
+.cd-title{ padding-top:7px; font-size:2.4em; color:#030303; line-height:34px;}
+.saomiao{ height:190px; margin-top:26px; position:relative;}
+.saomiao a{ display:block; float:left; padding-bottom:7px; border-bottom:1px solid #ae8e53; font-size:1.8em; color:#ae8e53; cursor:default;}
+.saomiao a:hover{ text-decoration:none;}
+html{ font-family:"\5B8B\4F53","\5FAE\8F6F\96C5\9ED1";}
+.s-qr{ width:180px; padding:5px 5px 5px 14px; background:url(../images/s-qr-bg.png) no-repeat; position:absolute; left:114px; top:-10px; display:none;}
+
+.foot{ border-top:1px solid #ededed; padding:8px 0; font-size:1.6em; color:#aaaaaa; font-family:"\5FAE\8F6F\96C5\9ED1";}
+.foot em{ font-family:arial;}
+.foot span{ display:inline-block; margin-right:10px;}
+.s1{ border-top:1px solid #a3a3a3;}
+
+.infobox{ background:url(../images/infobox-bg.jpg) repeat; background:none;}
+.infolist{ padding:100px 0 50px 0;}
+.infolist li{ width:300px; float:left; margin-right:13px;}
+
+.a1{ position:absolute; left:50%; top:186px; margin-left:-194px; animation:g1 0.7s ease-out 0.2s backwards; -moz-animation:g1 0.7s ease-out 0.2s backwards; -webkit-animation:g1 0.7s ease-out 0.2s backwards; -o-animation:g1 0.7s ease-out 0.2s backwards;}
+.a2{ position:absolute; left:50%; top:163px; margin-left:-308px; animation:g1 0.7s ease-out 0.5s backwards; -moz-animation:g1 0.7s ease-out 0.5s backwards; -webkit-animation:g1 0.7s ease-out 0.5s backwards; -o-animation:g1 0.7s ease-out 0.5s backwards;}
+.a3{ position:absolute; left:50%; top:88px; margin-left:-465px; animation:g1 0.7s ease-out 0.8s backwards; -moz-animation:g1 0.7s ease-out 0.8s backwards; -webkit-animation:g1 0.7s ease-out 0.8s backwards; -o-animation:g1 0.7s ease-out 0.8s backwards;}
+
+.resetbox{ width:926px; margin:0 auto; padding-top:156px;}
+.sleft{ width:588px; float:left; margin-right:-588px;}
+.sleft h1{ font-size:2.4em; color:#030303; font-family:"\5FAE\8F6F\96C5\9ED1"; padding-bottom:30px;}
+.st01{ width:584px; height:63px; line-height:63px\9; background:url(../images/st01-bg.png) no-repeat; padding-left:18px; font-size:2.4em; color:#a0a0a0;}
+.st02{ width:588px; height:63px; line-height:63px\9; background:url(../images/st02-bg.png) no-repeat; text-align:center; font-size:2.4em; color:#ffffff; cursor:pointer; font-family:"\5FAE\8F6F\96C5\9ED1";}
+
+.st02-on{ background:url(../images/st02-on-bg.png) no-repeat;}
+.sright{ margin-left:682px;}
+
+@keyframes g1{
+	0%{transform:translate(-2000px,0px);-moz-transform:translate(-2000px,0px);-webkit-transform:translate(-2000px,0px);-o-transform:translate(-2000px,0px);}
+	100%{transform:translate(0px,0px);-moz-transform:translate(0px,0px);-webkit-transform:translate(0px,0px);-o-transform:translate(0px,0px);}
+}
+.dpn{ display:none;}
+#pop-bg {
+    background-color: #000000;
+    bottom: 0;
+    display: none;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#popup {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
